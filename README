@@ -1,22 +1,3 @@
 Demo of Wicket 1.5 application running in Google AppEngine
 
-Trying to store page in the data store fails with:
-
-SEVERE: Error serializing object class org.wicketstuff.gae.HomePage [object=[Page class = org.wicketstuff.gae.HomePage, id = 0, render count = 1]]
-java.security.AccessControlException: access denied (java.io.SerializablePermission enableSubclassImplementation)
-	at java.security.AccessControlContext.checkPermission(AccessControlContext.java:323)
-	at java.security.AccessController.checkPermission(AccessController.java:546)
-	at java.lang.SecurityManager.checkPermission(SecurityManager.java:532)
-	at com.google.appengine.tools.development.DevAppServerFactory$CustomSecurityManager.checkPermission(DevAppServerFactory.java:166)
-	at java.io.ObjectOutputStream.<init>(ObjectOutputStream.java:253)
-	at org.apache.wicket.util.io.WicketObjectOutputStream.<init>(WicketObjectOutputStream.java:437)
-	at org.apache.wicket.util.io.WicketObjectStreamFactory.newObjectOutputStream(WicketObjectStreamFactory.java:49)
-	at org.apache.wicket.util.lang.WicketObjects.objectToByteArray(WicketObjects.java:475)
-	at org.apache.wicket.pageStore.DefaultPageStore.serializePage(DefaultPageStore.java:364)
-	at org.apache.wicket.pageStore.DefaultPageStore.storePage(DefaultPageStore.java:153)
-....
-
-The problem is described at http://code.google.com/p/googleappengine/issues/detail?id=2500
-
-
 Uses http://code.google.com/p/maven-gae-plugin/
