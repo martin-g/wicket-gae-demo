@@ -1,3 +1,3 @@
 Demo of Wicket 1.5 application running in Google AppEngine
 
-Uses http://code.google.com/p/maven-gae-plugin/
+The code is moved to: https://wicket-stuff.svn.sourceforge.net/svnroot/wicket-stuff/trunk/wicketstuff-core/jdk-1.5-parent/gae-initializer-parent
